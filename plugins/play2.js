@@ -4,6 +4,29 @@ import ytdl from 'ytdl-core';
 import axios from 'axios';
 import fg from 'api-dylux';
 
+const mg = '⚠️ خطأ: ';
+const mid = {
+  smsMalused4: 'يرجى إدخال نص صالح.',
+  smsVid: 'جاري تنزيل الفيديو...',
+  smsAud: 'جاري تنزيل الصوت...'
+};
+const lenguajeGB = {
+  smsAvisoEG: () => '⏳ جاري التنفيذ... ',
+  smsMalError3: () => '❌ حدث خطأ أثناء المعالجة.',
+  smsMensError2: () => 'يرجى المحاولة مرة أخرى لاحقًا.'
+};
+const wm = '𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗';
+const gataImg = 'https://example.com/default-thumbnail.jpg';
+const accountsgb = 'https://github.com/your-repo';
+
+const ytPlayVid = async (query) => {
+  const result = await yts(query);
+  return {
+    result: result.videos[0].url,
+    thumb: result.videos[0].thumbnail
+  };
+};
+
 const handler = async (m, { command, usedPrefix, conn, text }) => {
     if (!text) throw `${mg}${mid.smsMalused4}\n*${usedPrefix + command} Billie Eilish - Bellyache*`;
 
@@ -25,13 +48,9 @@ const handler = async (m, { command, usedPrefix, conn, text }) => {
             });
 
             try {
-                // Obtener el JSON de la API
                 const res = await fetch(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${encodeURIComponent(text)}`);
                 const json = await res.json();
-
-                // Verificar si hay un enlace de conversión
                 if (json.convert) {
-                    // Enviar el audio
                     await conn.sendMessage(m.chat, {
                         audio: { url: json.convert },
                         fileName: `audio.mp3`,
@@ -64,17 +83,13 @@ const handler = async (m, { command, usedPrefix, conn, text }) => {
 
             try {
                 const mediaa = await ytPlayVid(text);
-                const aa_2 = await conn.sendMessage(m.chat, {
+                await conn.sendMessage(m.chat, {
                     video: { url: mediaa.result },
                     fileName: `error.mp4`,
                     caption: `${wm}`,
                     thumbnail: mediaa.thumb,
                     mimetype: 'video/mp4'
                 }, { quoted: m });
-
-                if (!aa_2) {
-                    throw new Error();
-                }
             } catch {
                 try {
                     let res0 = await yts(text);
@@ -92,7 +107,6 @@ const handler = async (m, { command, usedPrefix, conn, text }) => {
         await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, m);
         console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`);
         console.log(e);
-        handler.limit = 0; // No gastar límite si fallas
     }
 };
 
