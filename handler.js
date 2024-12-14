@@ -1466,7 +1466,7 @@ global.dfail = (type, m, conn, usedPrefix) => {
         unreg: '「انت لست مسجلا」\n\n لا يمكنك استعمال البوت حتا تكون مسجلا ✋🥸🤚\n\nيمكنك التسجيل في البوت عبر الامر\n\nالامر: .reg الاسم.العمر\nمثال: .reg jeen.21',
         restrict: '[ 🔐 ] Este comando esta desactivado por mi jefe'
     }[type]
-    if (msg) return conn.sendMessage(m.chat, {text: msg, contextInfo: { mentionedJid: null, forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363372688988248@newsletter', serverMessageId: '', newsletterName: 'Ayoub dev ✨' }, externalAdReply : {mediaUrl: null, mediaType: 1, description: null, "title": `ℹ️معلوماتℹ️`, body: wm, previewType: 0, "thumbnail": img.getRandom(), sourceUrl: [nna, nna2, md, yt, nn, tiktok].getRandom()}}}, { quoted: m })
+    if (msg) return conn.sendMessage(m.chat, {text: msg, contextInfo: { mentionedJid: null, forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363307350192041@newsletter', serverMessageId: '', newsletterName: 'ABDO TECH ✨' }, externalAdReply : {mediaUrl: null, mediaType: 1, description: null, "title": `ℹ️معلوماتℹ️`, body: wm, previewType: 0, "thumbnail": img.getRandom(), sourceUrl: [nna, nna2, md, yt, nn, tiktok].getRandom()}}}, { quoted: m })
 }
 
 const file = global.__filename(import.meta.url, true);
