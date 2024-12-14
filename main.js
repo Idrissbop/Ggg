@@ -361,14 +361,14 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
 
-conn.welcome = 'HOLAA!! @user ¿COMO ESTAS?😃\n\n『Bienvenido A *@subject*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`'
-conn.bye = 'Bueno, se fue @user 👋\n\nQue dios lo bendiga 😎`'
-conn.spromote = 'Hey @user ya forma parte de staff 👑'
-conn.sdemote = 'jajaja @user ya no eres admins'
-conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
-conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
-conn.sIcon = 'El icono del grupo ha sido cambiado'
-conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
+conn.welcome = 'HELLO!! @user, HOW ARE YOU? 😃\n\n『Welcome to *@subject*』\n\nNice to meet you, friend 🤗\n\n_Remember to read the group rules to avoid any problems 🧐_\n\n*Just enjoy the group and have fun 🥳*`'
+conn.bye = 'Well, @user has left 👋\n\nMay God bless them 😎`'
+conn.spromote = 'Hey @user, you are now part of the staff 👑'
+conn.sdemote = 'Haha @user, you are no longer an admin'
+conn.sDesc = 'The description has been changed to \n@desc'
+conn.sSubject = 'The group name has been changed to \n@group'
+conn.sIcon = 'The group icon has been changed'
+conn.sRevoke = 'The group invite link has been changed to \n@revoke'
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
 conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
