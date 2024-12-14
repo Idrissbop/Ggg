@@ -1,193 +1,104 @@
-let search = require("yt-search");
-let axios = require("axios");
+import fetch from 'node-fetch';
+import yts from 'yt-search';
+import ytdl from 'ytdl-core';
+import axios from 'axios';
+import fg from 'api-dylux';
 
-let handler = async (m, { conn, text, usedPrefix }) => {
-    if (!text) throw 'Enter Title / Link From YouTube!';
+const handler = async (m, { command, usedPrefix, conn, text }) => {
+    if (!text) throw `${mg}${mid.smsMalused4}\n*${usedPrefix + command} Billie Eilish - Bellyache*`;
+
     try {
-        const look = await search(text);
-        const convert = look.videos[0];
-        if (!convert) throw 'Video/Audio Tidak Ditemukan';
-        if (convert.seconds >= 3600) {
-            return conn.reply(m.chat, 'Video is longer than 1 hour!', m);
-        } else {
-            let audioUrl;
-            try {
-                audioUrl = await youtube(convert.url);
-            } catch (e) {
-                conn.reply(m.chat, 'Please wait...', m);
-                audioUrl = await youtube(convert.url);
-            }
-
-            let caption = '';
-            caption += `∘ Title : ${convert.title}\n`;
-            caption += `∘ Ext : Search\n`;
-            caption += `∘ ID : ${convert.videoId}\n`;
-            caption += `∘ Duration : ${convert.timestamp}\n`;
-            caption += `∘ Viewers : ${convert.views}\n`;
-            caption += `∘ Upload At : ${convert.ago}\n`;
-            caption += `∘ Author : ${convert.author.name}\n`;
-            caption += `∘ Channel : ${convert.author.url}\n`;
-            caption += `∘ Url : ${convert.url}\n`;
-            caption += `∘ Description : ${convert.description}\n`;
-            caption += `∘ Thumbnail : ${convert.image}`;
-
-            await conn.relayMessage(m.chat, {
-                extendedTextMessage: {
-                    text: caption,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: convert.title,
-                            mediaType: 1,
-                            previewType: 0,
-                            renderLargerThumbnail: true,
-                            thumbnailUrl: convert.image,
-                            sourceUrl: audioUrl.mp3
-                        }
-                    },
-                    mentions: [m.sender]
-                }
-            }, {});
-
-            await conn.sendMessage(m.chat, {
-                audio: {
-                    url: audioUrl.result.mp3
-                },
-                mimetype: 'audio/mpeg',
+        if (command === 'play.1') {
+            conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, m, {
                 contextInfo: {
                     externalAdReply: {
-                        title: convert.title,
-                        body: "",
-                        thumbnailUrl: convert.image,
-                        sourceUrl: audioUrl.mp3,
+                        mediaUrl: null,
                         mediaType: 1,
-                        showAdAttribution: true,
-                        renderLargerThumbnail: true
+                        description: null,
+                        title: wm,
+                        body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝗦𝗔𝗽𝗽',
+                        previewType: 0,
+                        thumbnail: gataImg,
+                        sourceUrl: accountsgb
                     }
                 }
-            }, {
-                quoted: m
             });
+
+            try {
+                // Obtener el JSON de la API
+                const res = await fetch(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${encodeURIComponent(text)}`);
+                const json = await res.json();
+
+                // Verificar si hay un enlace de conversión
+                if (json.convert) {
+                    // Enviar el audio
+                    await conn.sendMessage(m.chat, {
+                        audio: { url: json.convert },
+                        fileName: `audio.mp3`,
+                        mimetype: 'audio/mp4'
+                    }, { quoted: m });
+                } else {
+                    throw new Error('No se pudo obtener el enlace de conversión.');
+                }
+            } catch (e) {
+                console.error('Error al obtener el audio:', e);
+                await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, m);
+            }
+        }
+
+        if (command === 'play.2') {
+            conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsVid, m, {
+                contextInfo: {
+                    externalAdReply: {
+                        mediaUrl: null,
+                        mediaType: 1,
+                        description: null,
+                        title: wm,
+                        body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝗦𝗔𝗽𝗽',
+                        previewType: 0,
+                        thumbnail: gataImg,
+                        sourceUrl: accountsgb
+                    }
+                }
+            });
+
+            try {
+                const mediaa = await ytPlayVid(text);
+                const aa_2 = await conn.sendMessage(m.chat, {
+                    video: { url: mediaa.result },
+                    fileName: `error.mp4`,
+                    caption: `${wm}`,
+                    thumbnail: mediaa.thumb,
+                    mimetype: 'video/mp4'
+                }, { quoted: m });
+
+                if (!aa_2) {
+                    throw new Error();
+                }
+            } catch {
+                try {
+                    let res0 = await yts(text);
+                    res0 = res0.videos[0];
+                    let yt0 = await fg.ytv(res0.url, '360p');
+                    await conn.sendFile(m.chat, yt0.dl_url, 'error.mp4', `${wm}`, m);
+                } catch {
+                    const res = await fetch(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${encodeURIComponent(text)}`);
+                    const json = await res.json();
+                    await conn.sendFile(m.chat, json.result.video, 'error.mp4', `${wm}`, m);
+                }
+            }
         }
     } catch (e) {
-        conn.reply(m.chat, `*Error:* ` + e.message, m);
+        await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, m);
+        console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`);
+        console.log(e);
+        handler.limit = 0; // No gastar límite si fallas
     }
 };
 
-handler.command = ['ds']
-handler.help = ['play', 'ds', 'song'];
+handler.help = ['play.1', 'play.2'].map(v => v + ' <texto>');
 handler.tags = ['downloader'];
-handler.exp = 0;
-handler.limit = true;
-handler.premium = false;
+handler.command = ['play.1', 'play.2'];
+handler.limit = 1;
 
-module.exports = handler;
-
-async function youtube(url) {
-   try {
-   const { data } = await axios.get("https://api.betabotz.eu.org/api/download/yt?url="+url+"&apikey=SewvfJSG")
-   return data;
-   } catch (e) {
-   return e;
-   }
-}
-
-//Jika mau pake module ytdl pake ini hilangin tag  /* */
-/*let ytdl = require('ytdl-core');
-let fs = require('fs');
-let ffmpeg = require('fluent-ffmpeg');
-let search = require ('yt-search');
-
-let handler = async (m, { conn, text }) => {
-  if (!text) return m.reply('*example*: .play Lathi');
-  try {
-    let results = await search(text);
-    let videoId = results.videos[0].videoId;
-    let info = await ytdl.getInfo(videoId);
-    let title = info.videoDetails.title.replace(/[^\w\s]/gi, '');
-    let thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-    let url = info.videoDetails.video_url;
-    let duration = parseInt(info.videoDetails.lengthSeconds);
-    let uploadDate = new Date(info.videoDetails.publishDate).toLocaleDateString();
-    let views = info.videoDetails.viewCount;
-    let minutes = Math.floor(duration / 60);
-    let description = results.videos[0].description;
-    let seconds = duration % 60;
-    let durationext = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;       
-    let audio = ytdl(videoId, { quality: 'highestaudio' });
-    let inputFilePath = './tmp/' + title + '.webm';
-    let outputFilePath = './tmp/' + title + '.mp3';
-    let viewsFormatted = formatViews(views);
-    let infoText = `◦ *Title*: ${title}\n◦ *Duration*: ${durationText}\n◦ *Upload*: ${uploadDate}\n◦ *Views*: ${viewsFormatted}\n◦ *ID*: ${videoId}\n◦ *Description*: ${description}\n◦ *URL*: ${url}
-  `;
-    const pesan = conn.relayMessage(m.chat, {
-                extendedTextMessage:{
-                text: infoText, 
-                contextInfo: {
-                     externalAdReply: {
-                        title: wm,
-                        body: "",
-                        mediaType: 1,
-                        previewType: 0,
-                        renderLargerThumbnail: true,
-                        thumbnailUrl: thumbnailUrl,
-                        sourceUrl: url
-                    }
-                }, mentions: [m.sender]
-}}, {});
-
-    audio.pipe(fs.createWriteStream(inputFilePath)).on('finish', async () => {
-      ffmpeg(inputFilePath)
-        .toFormat('mp3')
-        .on('end', async () => {
-          let buffer = fs.readFileSync(outputFilePath);                    
-          conn.sendMessage(m.chat, {         
-                audio: buffer,
-                mimetype: 'audio/mpeg',
-                contextInfo: {
-                    externalAdReply: {
-                        title: title,
-                        body: "",
-                        thumbnailUrl: thumbnailUrl,
-                        sourceUrl: url,
-                        mediaType: 1,
-                        showAdAttribution: true,
-                        renderLargerThumbnail: true
-                    }
-                }
-            }, {
-                quoted: m
-            });
-          fs.unlinkSync(inputFilePath);
-          fs.unlinkSync(outputFilePath);
-        })
-        .on('error', (err) => {
-          console.log(err);
-          m.reply(`There was an error converting the audio: ${err.message}`);
-          fs.unlinkSync(inputFilePath);
-          fs.unlinkSync(outputFilePath);
-        })
-        .save(outputFilePath);
-    });
-  } catch (e) {
-    console.log(e);
-    m.reply(`An error occurred while searching for the song: ${e.message}`);
-  }
-};
-
-handler.command = handler.help = ['play', 'song', 'ds'];
-handler.tags = ['downloader'];
-handler.premium = false;
-handler.limit = false;
-
-module.exports = handler
-
-function formatViews(views) {
-  if (views >= 1000000) {
-    return (views / 1000000).toFixed(1) + 'M';
-  } else if (views >= 1000) {
-    return (views / 1000).toFixed(1) + 'K';
-  } else {
-    return views.toString();
-  }
-}
-*/
+export default handler;
