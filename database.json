@@ -9860,7 +9860,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 14995,
+      "exp": 15067,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -10719,7 +10719,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 487,
+      "exp": 494,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -11148,7 +11148,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 414,
+      "exp": 418,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -80902,7 +80902,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 543,
+      "exp": 579,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -135945,7 +135945,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 573,
+      "exp": 589,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -136280,7 +136280,7 @@
       "psepick": 0,
       "robo": 0,
       "roboxp": 0,
-      "spam": 1734230856274
+      "spam": 1734231595899
     },
     "212682337756@s.whatsapp.net": {
       "afk": -1,
@@ -136375,7 +136375,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 554,
+      "exp": 584,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -136710,7 +136710,7 @@
       "psepick": 0,
       "robo": 0,
       "roboxp": 0,
-      "spam": 1734231192698
+      "spam": 1734231463979
     }
   },
   "chats": {
@@ -148571,10 +148571,10 @@
       "lastSuccess": 1734182473940
     },
     "ai-apk3.js": {
-      "total": 465,
-      "success": 436,
-      "last": 1734231192698,
-      "lastSuccess": 1734231192698
+      "total": 469,
+      "success": 440,
+      "last": 1734231595899,
+      "lastSuccess": 1734231595899
     },
     "_config-gift.js": {
       "total": 21,
