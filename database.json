@@ -9860,7 +9860,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 15067,
+      "exp": 15242,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -80902,7 +80902,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 579,
+      "exp": 608,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -113717,7 +113717,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 875,
+      "exp": 1046,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -114027,7 +114027,7 @@
       "wolflastfeed": 0,
       "wood": 0,
       "wortel": 0,
-      "spam": 1734216774092,
+      "spam": 1734236173539,
       "premiumDate": -1,
       "juegos": 0,
       "crime": 0,
@@ -135945,7 +135945,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 589,
+      "exp": 632,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -136280,7 +136280,7 @@
       "psepick": 0,
       "robo": 0,
       "roboxp": 0,
-      "spam": 1734231595899
+      "spam": 1734234860187
     },
     "212682337756@s.whatsapp.net": {
       "afk": -1,
@@ -136375,7 +136375,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 584,
+      "exp": 600,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -136710,7 +136710,7 @@
       "psepick": 0,
       "robo": 0,
       "roboxp": 0,
-      "spam": 1734231463979
+      "spam": 1734234991441
     }
   },
   "chats": {
@@ -148553,10 +148553,10 @@
   },
   "stats": {
     "Menu.js": {
-      "total": 319,
-      "success": 319,
-      "last": 1734231028472,
-      "lastSuccess": 1734231028472
+      "total": 320,
+      "success": 320,
+      "last": 1734235277629,
+      "lastSuccess": 1734235277629
     },
     "_config-make-account.js": {
       "total": 76,
@@ -148565,16 +148565,16 @@
       "lastSuccess": 1734231123115
     },
     "ytv.js": {
-      "total": 74,
+      "total": 75,
       "success": 31,
-      "last": 1734214547405,
+      "last": 1734236063691,
       "lastSuccess": 1734182473940
     },
     "ai-apk3.js": {
-      "total": 469,
-      "success": 440,
-      "last": 1734231595899,
-      "lastSuccess": 1734231595899
+      "total": 473,
+      "success": 444,
+      "last": 1734235563454,
+      "lastSuccess": 1734235563454
     },
     "_config-gift.js": {
       "total": 21,
@@ -148583,10 +148583,10 @@
       "lastSuccess": 1734231150743
     },
     "pinter.js": {
-      "total": 25,
-      "success": 22,
-      "last": 1734218886547,
-      "lastSuccess": 1734218886547
+      "total": 27,
+      "success": 23,
+      "last": 1734236190919,
+      "lastSuccess": 1734236190919
     },
     "_config-ping.js": {
       "total": 8,
@@ -148661,9 +148661,9 @@
       "lastSuccess": 1734222339635
     },
     "wm.js": {
-      "total": 15,
+      "total": 17,
       "success": 4,
-      "last": 1734211005089,
+      "last": 1734236013177,
       "lastSuccess": 1734098176606
     },
     "bingimg.js": {
@@ -148715,10 +148715,10 @@
       "lastSuccess": 1734207192943
     },
     "Jeen-ai.js": {
-      "total": 53,
-      "success": 45,
-      "last": 1734223050724,
-      "lastSuccess": 1734223050724
+      "total": 55,
+      "success": 47,
+      "last": 1734235367274,
+      "lastSuccess": 1734235367274
     },
     "jeen-ai.js": {
       "total": 4,
@@ -148781,10 +148781,10 @@
       "lastSuccess": 1734211052939
     },
     "yts.js": {
-      "total": 30,
-      "success": 26,
-      "last": 1734214280412,
-      "lastSuccess": 1734214280412
+      "total": 31,
+      "success": 27,
+      "last": 1734235911776,
+      "lastSuccess": 1734235911776
     },
     "fb.js": {
       "total": 8,
