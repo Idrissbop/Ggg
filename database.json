@@ -9860,7 +9860,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 15950,
+      "exp": 16098,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -80902,7 +80902,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 618,
+      "exp": 621,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -113717,7 +113717,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 1482,
+      "exp": 1629,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -114027,7 +114027,7 @@
       "wolflastfeed": 0,
       "wood": 0,
       "wortel": 0,
-      "spam": 1734239612466,
+      "spam": 1734241013611,
       "premiumDate": -1,
       "juegos": 0,
       "crime": 0,
@@ -149038,16 +149038,16 @@
       "lastSuccess": 1734231123115
     },
     "ytv.js": {
-      "total": 75,
+      "total": 80,
       "success": 31,
-      "last": 1734236063691,
+      "last": 1734240615183,
       "lastSuccess": 1734182473940
     },
     "ai-apk3.js": {
-      "total": 474,
-      "success": 445,
-      "last": 1734236376522,
-      "lastSuccess": 1734236376522
+      "total": 475,
+      "success": 446,
+      "last": 1734240346755,
+      "lastSuccess": 1734240346755
     },
     "_config-gift.js": {
       "total": 21,
@@ -149056,10 +149056,10 @@
       "lastSuccess": 1734231150743
     },
     "pinter.js": {
-      "total": 31,
-      "success": 27,
-      "last": 1734236714042,
-      "lastSuccess": 1734236714042
+      "total": 32,
+      "success": 28,
+      "last": 1734241028011,
+      "lastSuccess": 1734241028011
     },
     "_config-ping.js": {
       "total": 8,
@@ -149146,10 +149146,10 @@
       "lastSuccess": 1734238297182
     },
     "_config-serie.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1734096206193,
-      "lastSuccess": 1734096206193
+      "total": 5,
+      "success": 5,
+      "last": 1734240922911,
+      "lastSuccess": 1734240922911
     },
     "__config-autolevelup.js": {
       "total": 22,
@@ -149176,10 +149176,10 @@
       "lastSuccess": 1734222271032
     },
     "_config-addprem.js": {
-      "total": 9,
-      "success": 9,
-      "last": 1734120577337,
-      "lastSuccess": 1734120577337
+      "total": 10,
+      "success": 10,
+      "last": 1734239742811,
+      "lastSuccess": 1734239742811
     },
     "blackbox.js": {
       "total": 12,
