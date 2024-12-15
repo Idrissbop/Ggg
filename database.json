@@ -2667,7 +2667,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 727,
+      "exp": 742,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -9860,7 +9860,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 16098,
+      "exp": 17637,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -10719,7 +10719,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 494,
+      "exp": 500,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -11148,7 +11148,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 418,
+      "exp": 421,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -80902,7 +80902,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 621,
+      "exp": 629,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -113717,7 +113717,7 @@
       "emas": 0,
       "emerald": 0,
       "esteh": 0,
-      "exp": 1629,
+      "exp": 2102,
       "expg": 0,
       "exphero": 0,
       "expired": 0,
@@ -114027,7 +114027,7 @@
       "wolflastfeed": 0,
       "wood": 0,
       "wortel": 0,
-      "spam": 1734241013611,
+      "spam": 1734243551883,
       "premiumDate": -1,
       "juegos": 0,
       "crime": 0,
@@ -149026,10 +149026,10 @@
   },
   "stats": {
     "Menu.js": {
-      "total": 320,
-      "success": 320,
-      "last": 1734235277629,
-      "lastSuccess": 1734235277629
+      "total": 321,
+      "success": 321,
+      "last": 1734242593309,
+      "lastSuccess": 1734242593309
     },
     "_config-make-account.js": {
       "total": 77,
@@ -149044,10 +149044,10 @@
       "lastSuccess": 1734182473940
     },
     "ai-apk3.js": {
-      "total": 475,
-      "success": 446,
-      "last": 1734240346755,
-      "lastSuccess": 1734240346755
+      "total": 476,
+      "success": 447,
+      "last": 1734241493775,
+      "lastSuccess": 1734241493775
     },
     "_config-gift.js": {
       "total": 21,
@@ -149056,10 +149056,10 @@
       "lastSuccess": 1734231150743
     },
     "pinter.js": {
-      "total": 32,
-      "success": 28,
-      "last": 1734241028011,
-      "lastSuccess": 1734241028011
+      "total": 59,
+      "success": 55,
+      "last": 1734243564601,
+      "lastSuccess": 1734243564601
     },
     "_config-ping.js": {
       "total": 8,
@@ -149074,9 +149074,9 @@
       "lastSuccess": 0
     },
     "shazam.js": {
-      "total": 7,
+      "total": 9,
       "success": 0,
-      "last": 1734215698180,
+      "last": 1734242725430,
       "lastSuccess": 0
     },
     "addt.js": {
@@ -149104,9 +149104,9 @@
       "lastSuccess": 1734237431764
     },
     "simsimi.js": {
-      "total": 23,
+      "total": 24,
       "success": 4,
-      "last": 1734221320200,
+      "last": 1734242770977,
       "lastSuccess": 1734221320200
     },
     "edit.js": {
